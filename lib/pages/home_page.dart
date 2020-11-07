@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage>{
                        Container(
                            padding:EdgeInsets.all(7),
                            decoration: BoxDecoration(
-                             borderRadius:BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                             borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                              color:Colors.green,
                            ),
                            child:Text('Python beginner',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage>{
                             Container(
                                 padding:EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                                   color:Colors.green,
                                 ),
                                 child:Text('Python intermediate',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage>{
                             Container(
                                 padding:EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
+                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                                   color:Colors.green,
                                 ),
                                 child:Text('Python advanced',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))

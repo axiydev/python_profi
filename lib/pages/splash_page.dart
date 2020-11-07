@@ -34,7 +34,7 @@ class _SplashPageState extends State<SplashPage>{
              child:Column(
                mainAxisAlignment:MainAxisAlignment.end,
                children:[
-                 Text('QalbTeamSoft',style:TextStyle(fontSize: 18,fontFamily:'SyneMono'),),
+                 Text('QalbTeamSoft',style:TextStyle(fontSize: 18,fontFamily:'Itim',color:Colors.grey),),
                ],
              ),
            ),

@@ -30,4 +30,6 @@ flutter:
     - family: Billabong
       fonts:
         - asset: assets/fonts/Billabong.ttf
-
+    - family: Itim
+      fonts:
+        - asset: assets/fonts/Itim-Regular.ttf

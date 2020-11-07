@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage>{
                              borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                              color:Colors.green,
                            ),
-                           child:Text('Python beginner',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
+                           child:Text('Python beginner',style:TextStyle(fontFamily:'Itim',fontSize:17,color: Colors.white))
                        ),
                      ],
                    ),
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage>{
                                   borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                                   color:Colors.green,
                                 ),
-                                child:Text('Python intermediate',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
+                                child:Text('Python intermediate',style:TextStyle(fontFamily:'Itim',fontSize:17,color: Colors.white,))
                             ),
                           ],
                         ),
@@ -92,7 +92,7 @@ class _HomePageState extends State<HomePage>{
                                   borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
                                   color:Colors.green,
                                 ),
-                                child:Text('Python advanced',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
+                                child:Text('Python advanced',style:TextStyle(fontFamily:'Itim',fontSize:17,color: Colors.white,))
                             ),
                           ],
                         ),

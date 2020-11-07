@@ -13,7 +13,7 @@ class _HomePageState extends State<HomePage>{
           width: double.infinity,
           child:Row(
           children: [
-            SizedBox(width: 60,),
+            SizedBox(width: 65,),
             Text('Python',style:TextStyle(color:Colors.yellow,fontSize:35,fontFamily:'Billabong')),
             Text('Profi',style:TextStyle(color:Colors.blue,fontSize:35,fontFamily:'Billabong')),
           ],

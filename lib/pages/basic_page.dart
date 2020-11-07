@@ -8,7 +8,26 @@ class _BasicPageState extends State<BasicPage>{
   Widget build(BuildContext context){
     return Scaffold(
       body:Center(
-        child:Text('welcome to basic',style:TextStyle(fontSize:40),),
+        child:CustomScrollView(
+          slivers:[
+            SliverAppBar(
+              expandedHeight:220,
+              floating:true,
+              pinned:true,
+              snap:true,
+              elevation:50,
+              backgroundColor:Colors.grey,
+              flexibleSpace:FlexibleSpaceBar(
+                centerTitle:true,
+                title:Text('Python beginner'),
+                background:Image(
+                  image:AssetImage('assets/images/'),
+                ),
+              ),
+
+            ),
+          ],
+        ),
       ),
     );
 

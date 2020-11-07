@@ -9,7 +9,7 @@ class SplashPage extends StatefulWidget{
 class _SplashPageState extends State<SplashPage>{
   _Timer(){
     Timer(Duration(seconds:3),(){
-      Navigator.pushNamed(context,HomePage.id);
+      Navigator.pushReplacementNamed(context,HomePage.id);
     });
   }
   @override

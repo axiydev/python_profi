@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_profi/pages/home_page.dart';
 class BasicPage extends StatefulWidget{
   static final String id='basic_page';
   _BasicPageState createState()=>_BasicPageState();
@@ -30,6 +31,12 @@ class _BasicPageState extends State<BasicPage>{
           ],
         ),
       ),
+      floatingActionButton:FloatingActionButton(
+        child:Icon(Icons.arrow_back_sharp),
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.blue,
+        onPressed: ()async{ await Navigator.pushReplacementNamed(context,HomePage.id);},
+      ),
     );
   }
   List _buildList(int count){
@@ -47,7 +54,7 @@ class _BasicPageState extends State<BasicPage>{
       padding:EdgeInsets.all(10),
       decoration:BoxDecoration(
         borderRadius:BorderRadius.circular(20),
-        color:Colors.red,
+        color:Colors.green,
       ),
       child:Text('Item ${i.toString()}',style:TextStyle(fontSize:25),),
     );

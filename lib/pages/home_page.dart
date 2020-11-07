@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage>{
                        Container(
                            padding:EdgeInsets.all(7),
                            decoration: BoxDecoration(
-                             borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
+                             borderRadius:BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
                              color:Colors.green,
                            ),
                            child:Text('Python beginner',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
@@ -64,7 +64,7 @@ class _HomePageState extends State<HomePage>{
                             Container(
                                 padding:EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
+                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
                                   color:Colors.green,
                                 ),
                                 child:Text('Python intermediate',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage>{
                             Container(
                                 padding:EdgeInsets.all(7),
                                 decoration: BoxDecoration(
-                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
+                                  borderRadius:BorderRadius.only(topLeft: Radius.circular(20),topRight: Radius.circular(20)),
                                   color:Colors.green,
                                 ),
                                 child:Text('Python advanced',style:TextStyle(fontSize:17,color: Colors.white,fontWeight: FontWeight.bold,))
@@ -112,14 +112,25 @@ class _HomePageState extends State<HomePage>{
       height:150,
       width: double.infinity,
       decoration:BoxDecoration(
-        borderRadius:BorderRadius.only(topLeft: Radius.zero,topRight: Radius.circular(15),bottomLeft: Radius.circular(15),bottomRight:Radius.circular(15),),
+        borderRadius:BorderRadius.only(topLeft: Radius.zero,topRight: Radius.circular(20),bottomLeft: Radius.circular(20),bottomRight:Radius.circular(20),),
         image:DecorationImage(
           image: AssetImage(image),
           fit:BoxFit.cover,
         ),
       ),
       child:Container(
-
+        decoration:BoxDecoration(
+          borderRadius:BorderRadius.only(topLeft: Radius.zero,topRight: Radius.circular(20),bottomLeft: Radius.circular(20),bottomRight:Radius.circular(20),),
+          gradient:LinearGradient(
+            begin: Alignment.bottomRight,
+            colors:[
+              Colors.white12.withOpacity(0.5),
+              Colors.white12.withOpacity(0.3),
+              Colors.white12.withOpacity(0.2),
+              Colors.white12.withOpacity(0.1),
+            ],
+          ),
+        )
       ),
     );
   }

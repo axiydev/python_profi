@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:python_profi/pages/basic_page.dart';
+import 'package:python_profi/animations/fade_animation.dart';
 class HomePage extends StatefulWidget{
   static final String id='home_page';
   @override
   _HomePageState createState()=>_HomePageState();
 }
-class _HomePageState extends State<HomePage>{
+class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin{
+  AnimationController _controller;
+  Animation _animation;
+  void initState(){
+    super.initState();
+    _controller=AnimationController(vsync:this,duration:Duration(milliseconds:300),);
+    _animation=Tween<double>(begin:1.0,end:30.0).animate(_controller)..addStatusListener((AnimationStatus status){
+      if(status==AnimationStatus.completed){}
+    });
+  }
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -30,7 +40,7 @@ class _HomePageState extends State<HomePage>{
         // color:Colors.blue,
         child:ListView(
           children:[
-            GestureDetector(
+            FadeAnimation(1.0,GestureDetector(
               child:Container(
                  margin: EdgeInsets.only(top:10),
                  width: double.infinity,
@@ -57,8 +67,8 @@ class _HomePageState extends State<HomePage>{
               onTap:()async{
                 await Navigator.pushReplacementNamed(context,BasicPage.id);
               },
-            ),
-            GestureDetector(
+            )),
+            FadeAnimation(1.1,GestureDetector(
               child:Container(
                 margin: EdgeInsets.only(top:10),
                 width: double.infinity,
@@ -82,8 +92,8 @@ class _HomePageState extends State<HomePage>{
                     ]
                 ),
               ),
-            ),
-            GestureDetector(
+            )),
+            FadeAnimation(1.2,GestureDetector(
               child:Container(
                 margin: EdgeInsets.only(top:10),
                 width: double.infinity,
@@ -107,7 +117,7 @@ class _HomePageState extends State<HomePage>{
                     ]
                 ),
               ),
-            ),
+            )),
           ],
         ),
       ),

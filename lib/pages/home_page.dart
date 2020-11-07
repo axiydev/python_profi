@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:python_profi/pages/basic_page.dart';
 class HomePage extends StatefulWidget{
   static final String id='home_page';
   @override
@@ -10,10 +11,12 @@ class _HomePageState extends State<HomePage>{
     return Scaffold(
       appBar:AppBar(
         title:Container(
+          padding:EdgeInsets.all(10),
           width: double.infinity,
           child:Row(
-          children: [
-            SizedBox(width: 100,),
+            mainAxisAlignment:MainAxisAlignment.center,
+            children: [
+            SizedBox(width: 5,),
             Text('Python',style:TextStyle(color:Colors.yellow,fontSize:35,fontFamily:'Billabong')),
             Text('Profi',style:TextStyle(color:Colors.blue,fontSize:35,fontFamily:'Billabong')),
           ],
@@ -40,7 +43,7 @@ class _HomePageState extends State<HomePage>{
                            padding:EdgeInsets.all(7),
                            decoration: BoxDecoration(
                              borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
-                             color:Colors.green,
+                             color:Colors.lightBlue,
                            ),
                            child:Text('Python beginner',style:TextStyle(fontFamily:'Itim',fontSize:17,color: Colors.white))
                        ),
@@ -51,6 +54,9 @@ class _HomePageState extends State<HomePage>{
                     ]
                 ),
             ),
+              onTap:()async{
+                await Navigator.pushReplacementNamed(context,BasicPage.id);
+              },
             ),
             GestureDetector(
               child:Container(
@@ -65,7 +71,7 @@ class _HomePageState extends State<HomePage>{
                                 padding:EdgeInsets.all(7),
                                 decoration: BoxDecoration(
                                   borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
-                                  color:Colors.green,
+                                  color:Colors.lightBlue,
                                 ),
                                 child:Text('Python intermediate',style:TextStyle(fontFamily:'Itim',fontSize:17,color: Colors.white,))
                             ),
@@ -90,7 +96,7 @@ class _HomePageState extends State<HomePage>{
                                 padding:EdgeInsets.all(7),
                                 decoration: BoxDecoration(
                                   borderRadius:BorderRadius.only(topLeft: Radius.circular(15),topRight: Radius.circular(15)),
-                                  color:Colors.green,
+                                  color:Colors.lightBlue,
                                 ),
                                 child:Text('Python advanced',style:TextStyle(fontFamily:'Itim',fontSize:17,color: Colors.white,))
                             ),

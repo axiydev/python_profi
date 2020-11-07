@@ -19,12 +19,12 @@ class _BasicPageState extends State<BasicPage>{
               backgroundColor:Colors.grey,
               flexibleSpace:FlexibleSpaceBar(
                 centerTitle:true,
-                title:Text('Python beginner'),
+                title:Text('Python beginner',style:TextStyle(fontFamily:'Itim',fontSize:30,color:Colors.white,),),
                 background:Image(
-                  image:AssetImage('assets/images/'),
+                  image:AssetImage('assets/images/ic_image_new.png'),
+                  fit:BoxFit.cover,
                 ),
               ),
-
             ),
           ],
         ),

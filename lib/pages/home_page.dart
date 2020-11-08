@@ -20,16 +20,6 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      drawer:Drawer(
-       child:Column(
-         children:[
-           Container(
-             height: 200,
-             color:Colors.deepPurple,
-           ),
-         ],
-       ),
-      ),
       backgroundColor:Colors.deepPurple,
       appBar:AppBar(
         title:Container(

@@ -32,7 +32,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           ],
         ),
         ),
-        backgroundColor: Colors.white,
+        elevation:0.0,
+        bottomOpacity: 0.0,
+        backgroundColor: Colors.transparent,
         centerTitle:true,
       ),
       body:Container(

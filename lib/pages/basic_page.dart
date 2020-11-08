@@ -17,7 +17,7 @@ class _BasicPageState extends State<BasicPage>{
               pinned:true,
               snap:true,
               elevation:50,
-              backgroundColor:Colors.blue[500],
+              backgroundColor:Colors.deepPurple,
               flexibleSpace:FlexibleSpaceBar(
                 centerTitle:true,
                 title:Text('Python beginner',style:TextStyle(fontFamily:'Itim',fontSize:20,color:Colors.white,),),
@@ -27,7 +27,11 @@ class _BasicPageState extends State<BasicPage>{
                 ),
               ),
             ),
-            SliverList(delegate:SliverChildListDelegate(_buildList(100))),
+            SliverList(
+              delegate:SliverChildListDelegate(
+                _buildList(20),
+              ),
+            ),
           ],
         ),
       ),
@@ -41,12 +45,13 @@ class _BasicPageState extends State<BasicPage>{
   }
   List _buildList(int count){
     List<Widget> items=new List();
-    for(int i=0;i<count;i++){
-      items.add(_itemList(i));
+    List<String> _themes_basic=['Welcome to python','Your first program','sdfdsf','sdfsdfds','sdfsdfsdfsd','sdfsdfsdfsdf','sdfsdfdsfs','sdfsdfds','sdfsdfsdfsd','sdfsdfsdfsdf','sdfsdfdsfs'];
+    for(int i=0;i<_themes_basic.length;i++){
+      items.add(_itemList(i+1,_themes_basic[i]));
     }
     return items;
   }
-  Widget _itemList(int i){
+  Widget _itemList(int i,String b){
     return Container(
       height:50,
       width:double.infinity,
@@ -54,9 +59,9 @@ class _BasicPageState extends State<BasicPage>{
       padding:EdgeInsets.all(10),
       decoration:BoxDecoration(
         borderRadius:BorderRadius.circular(20),
-        color:Colors.green,
+        color:Colors.deepPurple,
       ),
-      child:Text('Item ${i.toString()}',style:TextStyle(fontSize:25),),
+      child:Text('${i.toString()} ${b}',style:TextStyle(fontSize:25,fontFamily:'Itim',fontWeight:FontWeight.bold),),
     );
   }
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:python_profi/pages/home_page.dart';
 import 'package:python_profi/pages/splash_page.dart';
 import 'package:python_profi/pages/basic_page.dart';
+import 'package:python_profi/pages/intermadiete_page.dart';
 void main()=>runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
         HomePage.id:(context)=>HomePage(),
         SplashPage.id:(context)=>SplashPage(),
         BasicPage.id:(context)=>BasicPage(),
+        InterPage.id:(context)=>InterPage(),
       },
     );
   }

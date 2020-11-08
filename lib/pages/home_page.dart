@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:python_profi/pages/basic_page.dart';
 import 'package:python_profi/animations/fade_animation.dart';
+import 'package:python_profi/pages/intermadiete_page.dart';
 class HomePage extends StatefulWidget{
   static final String id='home_page';
   @override
@@ -19,6 +20,17 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      drawer:Drawer(
+       child:Column(
+         children:[
+           Container(
+             height: 200,
+             color:Colors.deepPurple,
+           ),
+         ],
+       ),
+      ),
+      backgroundColor:Colors.deepPurple,
       appBar:AppBar(
         title:Container(
           padding:EdgeInsets.all(10),
@@ -26,9 +38,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           child:Row(
             mainAxisAlignment:MainAxisAlignment.center,
             children: [
-            SizedBox(width: 5,),
-            Text('Python',style:TextStyle(color:Colors.yellow,fontSize:35,fontFamily:'Billabong')),
-            Text('Profi',style:TextStyle(color:Colors.blue,fontSize:35,fontFamily:'Billabong')),
+              SizedBox(width:0),
+              Text('Python',style:TextStyle(color:Colors.yellow,fontSize:30,fontFamily:'Billabong')),
+              Text('Profi',style:TextStyle(color:Colors.blue,fontSize:30,fontFamily:'Billabong')),
           ],
         ),
         ),
@@ -71,6 +83,9 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
               },
             )),
             FadeAnimation(1.1,GestureDetector(
+              onTap:()async{
+                await Navigator.pushReplacementNamed(context, InterPage.id);
+              },
               child:Container(
                 margin: EdgeInsets.only(top:10),
                 width: double.infinity,

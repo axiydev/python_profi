@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:python_profi/pages/basic_page.dart';
 import 'package:python_profi/animations/fade_animation.dart';
 import 'package:python_profi/pages/intermadiete_page.dart';
+import 'dart:io';
+import 'package:requests/requests.dart';
 class HomePage extends StatefulWidget{
   static final String id='home_page';
   @override
@@ -17,6 +19,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
       if(status==AnimationStatus.completed){}
     });
   }
+_brows()async{
+  var r = await Requests.get('https://google.com');
+  return r;
+}
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -129,27 +135,17 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         ),
       ),
       floatingActionButtonLocation:FloatingActionButtonLocation.endTop,
-      floatingActionButton:Row(
-        mainAxisAlignment:MainAxisAlignment.end,
-        children:[
-          FloatingActionButton(
-            onPressed:(){
-            },
-            child:Icon(Icons.group,size: 30,color:Colors.yellowAccent),
-            backgroundColor:Colors.deepPurple,
-            elevation:0.0,
-            // foregroundColor:Colors.blue,
-          ),
-          FloatingActionButton(
-            onPressed:(){
-            },
-            child:Icon(Icons.message),
-            backgroundColor:Colors.deepPurple,
-            elevation:0.0,
-            foregroundColor:Colors.yellowAccent,
-          ),
-        ],
-      ),
+      floatingActionButton:FloatingActionButton(
+        onPressed:(){
+          setState((){
+            _brows();
+          });
+        },
+        child:Icon(Icons.group,size:40),
+        backgroundColor:Colors.deepPurple,
+        elevation:0.0,
+        foregroundColor:Colors.yellowAccent,
+      )
     );
   }
   Widget _pyTheme({image}){

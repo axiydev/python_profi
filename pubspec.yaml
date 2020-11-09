@@ -12,6 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   simple_animations: 2.2.3
+  requests: ^3.3.0
 
 dev_dependencies:
   flutter_test:

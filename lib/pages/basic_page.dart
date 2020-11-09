@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:python_profi/pages/home_page.dart';
+import 'package:python_profi/pages/basic_themes.dart';
 class BasicPage extends StatefulWidget{
   static final String id="basic_page";
   @override
@@ -23,8 +24,8 @@ class _BasicPageState extends State<BasicPage>{
           crossAxisCount:3,
           children:[
             GestureDetector(
-              onTap:(){
-                print('CLICKED');
+              onTap:()async{
+                await Navigator.pushNamed(context,ThemeOne.id);
               },
               child:_itemList(title:'1-mavzu'),
             ),

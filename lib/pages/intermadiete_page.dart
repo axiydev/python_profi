@@ -22,24 +22,114 @@ class _InterPageState extends State<InterPage>{
         child:GridView.count(
           crossAxisCount:3,
           children:[
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
-            _itemList(title:'Theme 1',image:'assets/images/ic_logo12.png'),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'1-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'2-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'3-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'4-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'5-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'6-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'7-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'8-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'9-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'10-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'11-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'12-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'13-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'14-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'15-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'16-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'17-mavzu'),
+            ),
+            GestureDetector(
+              onTap:(){
+                print('CLICKED');
+              },
+              child:_itemList(title:'18-mavzu'),
+            ),
           ],
         ),
       ),
@@ -53,7 +143,7 @@ class _InterPageState extends State<InterPage>{
       ),
     );
   }
-  Widget _itemList({String title,String image}){
+  Widget _itemList({String title,String image="assets/images/ic_logo12.png"}){
     return Container(
       margin:EdgeInsets.all(5),
       decoration:BoxDecoration(

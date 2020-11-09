@@ -128,6 +128,28 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
           ],
         ),
       ),
+      floatingActionButtonLocation:FloatingActionButtonLocation.endTop,
+      floatingActionButton:Row(
+        mainAxisAlignment:MainAxisAlignment.end,
+        children:[
+          FloatingActionButton(
+            onPressed:(){
+            },
+            child:Icon(Icons.group,size: 30,color:Colors.yellowAccent),
+            backgroundColor:Colors.deepPurple,
+            elevation:0.0,
+            // foregroundColor:Colors.blue,
+          ),
+          FloatingActionButton(
+            onPressed:(){
+            },
+            child:Icon(Icons.message),
+            backgroundColor:Colors.deepPurple,
+            elevation:0.0,
+            foregroundColor:Colors.yellowAccent,
+          ),
+        ],
+      ),
     );
   }
   Widget _pyTheme({image}){
